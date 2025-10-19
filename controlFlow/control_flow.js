@@ -49,3 +49,18 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status: ", authenticationStatus);
+
+let personRole = "enrolled";
+let dietaryAccessMessage;
+
+if (personRole === "employee") {
+    dietaryAccessMessage = "You have access to Dietary Services";
+} else if (personRole === "enrolled") {
+    dietaryAccessMessage = "You have full access to Dietary Services and interaction with dietician";
+} else if (personRole === "subscriber") {
+    dietaryAccessMessage = "You have access to Dietary Services";
+} else {
+    dietaryAccessMessage = "To get access to Dietary Services, please subscribe or enroll";
+}
+
+console.log("Dietary Access Message; ", dietaryAccessMessage)
